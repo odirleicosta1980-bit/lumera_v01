@@ -4,7 +4,7 @@ services:
     runtime: node
     plan: free
     rootDir: .
-    buildCommand: corepack enable && corepack prepare pnpm@10.0.0 --activate && pnpm install --frozen-lockfile --prod=false && pnpm db:generate && pnpm --filter @lumera/api build
+    buildCommand: corepack enable && corepack prepare pnpm@10.0.0 --activate && pnpm install --no-frozen-lockfile --prod=false && pnpm db:generate && pnpm --filter @lumera/api build
     startCommand: corepack enable && corepack prepare pnpm@10.0.0 --activate && pnpm --filter @lumera/api prisma:migrate:deploy && pnpm --filter @lumera/api start
     healthCheckPath: /api/health
     envVars:
