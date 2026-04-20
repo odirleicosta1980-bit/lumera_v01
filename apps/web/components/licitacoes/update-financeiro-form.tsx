@@ -29,7 +29,7 @@ type AllocationForm = {
 type UpdateFinanceiroFormProps = {
   licitacaoId: string;
   financeiro: LicitacaoFinanceiro | null;
-  financialRule: FinancialRule | null;
+  financialRule?: FinancialRule | null;
   users: UserOption[];
   canManageAllocations?: boolean;
 };
