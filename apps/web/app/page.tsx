@@ -6,18 +6,6 @@ import { getNotifications } from '../lib/notifications';
 import { getDashboardSummary, getKanbanData } from '../lib/kanban-api';
 import { requireSessionUser } from '../lib/server-auth';
 
-function formatDateTime(value?: string | null) {
-  if (!value) {
-    return '-';
-  }
-
-  return new Intl.DateTimeFormat('pt-BR', {
-    dateStyle: 'short',
-    timeStyle: 'short',
-    timeZone: 'UTC',
-  }).format(new Date(value));
-}
-
 function formatTime(value?: string | null) {
   if (!value) {
     return '--:--';
