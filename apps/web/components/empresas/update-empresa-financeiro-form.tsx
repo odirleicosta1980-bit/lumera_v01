@@ -31,7 +31,7 @@ type CompanyFinanceProps = {
   company: {
     id: string;
     legalName: string;
-    tradeName: string | null;
+    tradeName?: string | null;
     financialRule?: FinancialRule | null;
   };
 };
