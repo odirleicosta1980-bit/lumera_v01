@@ -205,10 +205,6 @@ export function UpdateFinanceiroForm({
     () => Number(normalizeCurrencyForSubmit(valorTotalRateio) || 0),
     [valorTotalRateio],
   );
-  const percentualTotalAlocado = useMemo(
-    () => allocations.reduce((total, item) => total + parseDecimalLikeValue(item.percentual), 0),
-    [allocations],
-  );
   const valorTotalAlocado = useMemo(
     () =>
       allocations.reduce((total, item) => {
