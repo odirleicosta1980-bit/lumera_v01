@@ -318,6 +318,13 @@ export type LicitacaoEmpenho = {
   dataGeracaoBoleto?: string | null;
   dataPagamentoBoleto?: string | null;
   observacoes?: string | null;
+  anexos?: Array<{
+    id: string;
+    originalFileName: string;
+    createdAt: string;
+    storageKey: string;
+    category?: string | null;
+  }>;
 };
 export type FinanceiroAllocation = {
   id: string;
