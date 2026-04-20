@@ -32,6 +32,7 @@ type ApiLicitacao = {
   tarefas?: Array<{
     id: string;
     title: string;
+    description?: string | null;
     status: string;
     dueDate?: string | null;
   }>;
